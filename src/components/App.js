@@ -7,7 +7,8 @@ import Filters from './Filters';
 
 function App() {
   const [dataChar, setDataChar] = useState([]);
-  const [filterBySpecie, setFilterBySpecie] = useState('');
+  // const [filterBySpecie, setFilterBySpecie] = useState('');
+  const [filterByName, setFilterByName] = useState('');
 
   useEffect(() => {
     callToApi().then((cleanData) => {
