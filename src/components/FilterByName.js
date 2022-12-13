@@ -1,11 +1,18 @@
+import '../styles/components/FilterByName.scss';
+
 function FilterByName(props) {
   const handleChange = (ev) => {
     props.handleFilterName(ev.target.value);
   };
   return (
-    <>
-      <input className="inputName" type="text" onChange={handleChange}></input>
-    </>
+    <div className="filterName">
+      <input
+        className="filterName__input"
+        type="text"
+        placeholder="Example: Rick..."
+        onChange={handleChange}
+      ></input>
+    </div>
   );
 }
 

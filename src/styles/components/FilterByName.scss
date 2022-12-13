@@ -1,0 +1,16 @@
+@import '../core/Variables.scss';
+
+.filterName{
+    padding:15px
+     ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__input{
+        border:1px solid $mainColor;
+        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px $mainColor;
+        outline: 0 none;
+        padding: 5px 10px;
+        width: 50%;
+    }
+}

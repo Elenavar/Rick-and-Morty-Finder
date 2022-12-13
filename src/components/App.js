@@ -29,7 +29,7 @@ function App() {
   );
 
   return (
-    <div>
+    <div className="page">
       <h1>Rick and Morty</h1>
       <Filters handleFilterName={handleFilterName}></Filters>
       <ListCharacters characters={filterData}></ListCharacters>

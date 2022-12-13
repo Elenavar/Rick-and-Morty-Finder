@@ -1,7 +1,10 @@
 .section{
+    padding: 10px 30px;
     &__list{
         display: flex;
+        justify-content: center;
+        display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 20px;
     }
 }

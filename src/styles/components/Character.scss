@@ -1,11 +1,12 @@
+@import '../core/Variables.scss';
 .character{
+    background-color: $mainColor;
     &__link{
-        color: white;
+        color:$textColor;
         &--img{
             width: 200px;
         }
         &--info{
-            background-color: rgb(5, 208, 223);
             width: 200px;
             padding: 10px;
         }
