@@ -12,8 +12,11 @@ const callToApi = () => {
           name: char.name,
           image: char.image,
           specie: char.species,
+          origin: char.origin,
+          episodes: char.episode.length,
         };
       });
+      console.log(cleanData);
       return cleanData;
     });
 };
