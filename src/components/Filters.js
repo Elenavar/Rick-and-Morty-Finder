@@ -1,12 +1,12 @@
 // import FilterBySpecie from './FilterBySpecie';
-import filterByName from './FilterByName';
+import FilterByName from './FilterByName';
 
 function Filters(props) {
   return (
     // <FilterBySpecie
     //   handleFilterSpecie={props.handleFilterSpecie}
     // ></FilterBySpecie>
-    <filterByName handleFilterByName={props.handleFilterByName}></filterByName>
+    <FilterByName handleFilterName={props.handleFilterName}></FilterByName>
   );
 }
 

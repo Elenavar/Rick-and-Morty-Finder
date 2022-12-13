@@ -24,11 +24,15 @@ function App() {
     setFilterByName(name);
   };
 
+  const filterData = dataChar.filter((char) =>
+    char.name.includes(filterByName)
+  );
+
   return (
     <div>
       <h1>Rick and Morty</h1>
       <Filters handleFilterName={handleFilterName}></Filters>
-      <ListCharacters characters={dataChar}></ListCharacters>
+      <ListCharacters characters={filterData}></ListCharacters>
     </div>
   );
 }

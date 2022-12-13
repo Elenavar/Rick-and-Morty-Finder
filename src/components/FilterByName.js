@@ -1,7 +1,10 @@
 function FilterByName(props) {
+  const handleChange = (ev) => {
+    props.handleFilterName(ev.target.value);
+  };
   return (
     <>
-      <input type="text" onChange={props.handleFilterByName}></input>
+      <input className="inputName" type="text" onChange={handleChange}></input>
     </>
   );
 }
