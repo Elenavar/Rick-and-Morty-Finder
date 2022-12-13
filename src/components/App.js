@@ -1,6 +1,7 @@
 import '../styles/App.scss';
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 import ListCharacters from './ListCharacters';
 import Filters from './Filters';
@@ -31,8 +32,18 @@ function App() {
   return (
     <div className="page">
       <h1>Rick and Morty</h1>
-      <Filters handleFilterName={handleFilterName}></Filters>
-      <ListCharacters characters={filterData}></ListCharacters>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Filters handleFilterName={handleFilterName} />
+              <ListCharacters characters={filterData} />
+            </>
+          }
+        ></Route>
+        <Route path="/character/:id" element={<CharacterDetail />}></Route>
+      </Routes>
     </div>
   );
 }
