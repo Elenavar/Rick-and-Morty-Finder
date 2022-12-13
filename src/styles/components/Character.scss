@@ -1,0 +1,13 @@
+.character{
+    &__link{
+        color: white;
+        &--img{
+            width: 200px;
+        }
+        &--info{
+            background-color: rgb(5, 208, 223);
+            width: 200px;
+            padding: 10px;
+        }
+    }
+}
