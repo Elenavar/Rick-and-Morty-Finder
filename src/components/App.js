@@ -20,11 +20,14 @@ function App() {
   //   setFilterBySpecie(specie);
   // };
 
+  const handleFilterName = (name) => {
+    setFilterByName(name);
+  };
 
   return (
     <div>
       <h1>Rick and Morty</h1>
-      <Filters {/*handleFilterSpecie={handleFilterSpecie}*/}></Filters>
+      <Filters handleFilterName={handleFilterName}></Filters>
       <ListCharacters characters={dataChar}></ListCharacters>
     </div>
   );
