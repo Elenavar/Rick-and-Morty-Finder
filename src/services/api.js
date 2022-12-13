@@ -1,6 +1,8 @@
 const callToApi = () => {
   // Llamamos a la API
-  return fetch('https://rickandmortyapi.com/api/character')
+  return fetch(
+    'https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json'
+  )
     .then((response) => response.json())
     .then((data) => {
       // Cuando responde la API podemos limpiar los datos aquí
