@@ -1,7 +1,7 @@
 import '../styles/App.scss';
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
-import { Route, Routes, matchPath, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 /*Components*/
 import ListCharacters from './ListCharacters';
 import Filters from './Filters';
@@ -30,15 +30,15 @@ function App() {
     char.name.includes(filterByName)
   );
 
-  const { pathname } = useLocation();
+  const findCharacter = (id) => {
+    return dataChar.find((char) => char.id === parseInt(id));
+  };
 
-  const dataUrl = matchPath('/character/:id', pathname);
-  const userId = dataUrl !== null ? dataUrl.params.userid : null;
-
-  const characterFound = dataChar.find((char) => char.id === userId);
   return (
     <div className="page">
-      <h1>Rick and Morty</h1>
+      <header className="header">
+        <h1 className="header__text">Rick and Morty</h1>
+      </header>
       <Routes>
         <Route
           path="/"
@@ -50,10 +50,14 @@ function App() {
           }
         ></Route>
         <Route
-          path="/character/:id"
-          element={<CharacterDetail character={characterFound} />}
+          path="/character/:characterId"
+          element={<CharacterDetail findCharacter={findCharacter} />}
         ></Route>
       </Routes>
+      <footer className="footer">
+        <h3 className="footer__h3">Rick and Morty</h3>
+        <p className="footer__p">Created by Justin Roiland and Dan Harmon</p>
+      </footer>
     </div>
   );
 }

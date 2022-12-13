@@ -14,9 +14,9 @@ const callToApi = () => {
           specie: char.species,
           origin: char.origin,
           episodes: char.episode.length,
+          status: char.status,
         };
       });
-      console.log(cleanData);
       return cleanData;
     });
 };

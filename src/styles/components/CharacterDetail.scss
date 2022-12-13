@@ -1,0 +1,28 @@
+@import '../core/Variables.scss';
+.article{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.characterDetails{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+    background-color: $mainColor;
+    color: $textColor;
+    transform: translateY(-20px);
+    &__img{
+        width: 300px;
+        padding: 30px;
+    }
+    &__text{
+        padding: 0 30px 0 5px;
+        gap: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
