@@ -1,10 +1,10 @@
-import FilterBySpecie from './FilterBySpecie';
+// import FilterBySpecie from './FilterBySpecie';
 
 function Filters(props) {
   return (
-    <FilterBySpecie
-      handleFilterSpecie={props.handleFilterSpecie}
-    ></FilterBySpecie>
+    // <FilterBySpecie
+    //   handleFilterSpecie={props.handleFilterSpecie}
+    // ></FilterBySpecie>
   );
 }
 

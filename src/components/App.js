@@ -16,15 +16,16 @@ function App() {
     });
   }, []);
 
-  const handleFilterSpecie = (specie) => {
-    setFilterBySpecie(specie);
-  };
+  // const handleFilterSpecie = (specie) => {
+  //   setFilterBySpecie(specie);
+  // };
+
 
   return (
     <div>
-      <h1>Rock and Morty</h1>
+      <h1>Rick and Morty</h1>
+      <Filters {/*handleFilterSpecie={handleFilterSpecie}*/}></Filters>
       <ListCharacters characters={dataChar}></ListCharacters>
-      <Filters handleFilterSpecie={handleFilterSpecie}></Filters>
     </div>
   );
 }
