@@ -33,9 +33,13 @@ function App() {
   };
 
   const filterData = dataChar
-    .filter((char) => char.name.includes(filterByName))
+    .filter((char) =>
+      char.name.toLowerCase().includes(filterByName.toLowerCase())
+    )
     .filter((char) => {
-      return filterBySpecie === 'all' ? true : char.specie === filterBySpecie;
+      return filterBySpecie === 'all'
+        ? true
+        : char.specie.toLowerCase() === filterBySpecie;
     });
 
   const findCharacter = (id) => {

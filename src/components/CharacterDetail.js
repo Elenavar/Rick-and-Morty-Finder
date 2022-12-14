@@ -16,7 +16,7 @@ function CharacterDetail(props) {
               src={charFound.image}
               alt={`Foto de ${charFound.name}`}
             />
-            <div class="characterDetails__text">
+            <div className="characterDetails__text">
               <h2 className="charFocharacterDetails__text--name">
                 {charFound.name}
               </h2>
@@ -33,7 +33,7 @@ function CharacterDetail(props) {
                 Episodes: {charFound.episodes}
               </p>
               <Link to="/">
-                <p className="characterDetails__back"></p>
+                <p className="characterDetails__back">Back</p>
               </Link>
             </div>
           </div>

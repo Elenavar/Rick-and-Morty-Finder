@@ -1,9 +1,10 @@
 @import '../core/Variables.scss';
 
-.specie{
-    transform: translateY(-100%);
-    size: 100px;
-    color: white;
-    background-color: $mainColor;
-    padding: 1px;
+.select{
+    width: 70px;
+    transform: translateY(-70%);
+    color: $mainColor;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px $mainColor;
+
+    outline: 0 none;
 }
