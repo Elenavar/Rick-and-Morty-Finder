@@ -12,7 +12,7 @@ function Character(props) {
         />
         <div className="character__link--info info">
           <h2 className="info__name">{props.character.name}</h2>
-          <p className="info__specie">{props.character.specie} </p>
+          <p className="info__specie">{props.character.specie}</p>
         </div>
       </Link>
     </li>

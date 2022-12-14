@@ -2,19 +2,26 @@
 .article{
     background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding-bottom: 20px;
+    @media all and ( min-width: 768px){
+        flex-direction: row;
+    }
 }
 .characterDetails{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 600px;
     background-color: $mainColor;
     color: $textColor;
     transform: translateY(-20px);
+    box-shadow: 0 0 100px $mainColor;
+    border-radius: 10px;
+    width: 70%;
     &__img{
-        width: 300px;
+        width: 40%;
         padding: 30px;
     }
     &__text{
@@ -28,6 +35,9 @@
     &__back{
         margin-top: 20px;
         padding: 5px;
+        background-color: white;
+        border-radius: 50px;
+        color: $mainColor;
     }
 }
 

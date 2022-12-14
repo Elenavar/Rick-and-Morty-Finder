@@ -5,10 +5,10 @@ import '../styles/components/Filter.scss';
 function Filters(props) {
   return (
     <form className="filters">
+      <FilterByName handleFilterName={props.handleFilterName}></FilterByName>
       <FilterBySpecie
         handleFilterSpecie={props.handleFilterSpecie}
       ></FilterBySpecie>
-      <FilterByName handleFilterName={props.handleFilterName}></FilterByName>
     </form>
   );
 }

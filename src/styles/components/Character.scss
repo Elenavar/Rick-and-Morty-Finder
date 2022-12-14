@@ -1,10 +1,13 @@
 @import '../core/Variables.scss';
 .character{
+    border: 3px solid $mainColor;
+    border-radius: 5px;
     background-color: $mainColor;
     &__link{
         color:$textColor;
         &--img{
             width: 200px;
+            border-radius: 5px;
         }
         &--info{
             width: 200px;
