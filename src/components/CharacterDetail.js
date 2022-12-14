@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import '../styles/components/CharacterDetail.scss';
+import { Link } from 'react-router-dom';
 
 function CharacterDetail(props) {
   const params = useParams();
@@ -28,6 +29,11 @@ function CharacterDetail(props) {
           <p className="charFocharacterDetails__text--info">
             Episodes: {charFound.episodes}
           </p>
+          <Link to="/">
+            <p className="characterDetails__back">
+              {/* <i class="fa-sharp fa-solid fa-arrow-left"></i>Back */}
+            </p>
+          </Link>
         </div>
       </div>
     </article>
