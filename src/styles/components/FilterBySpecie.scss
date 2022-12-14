@@ -1,4 +1,9 @@
+@import '../core/Variables.scss';
+
 .specie{
+    transform: translateY(-100%);
     size: 100px;
-    color: red;
+    color: white;
+    background-color: $mainColor;
+    padding: 1px;
 }

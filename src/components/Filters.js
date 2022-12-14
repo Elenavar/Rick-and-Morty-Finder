@@ -1,12 +1,15 @@
-// import FilterBySpecie from './FilterBySpecie';
+import FilterBySpecie from './FilterBySpecie';
 import FilterByName from './FilterByName';
+import '../styles/components/Filter.scss';
 
 function Filters(props) {
   return (
-    // <FilterBySpecie
-    //   handleFilterSpecie={props.handleFilterSpecie}
-    // ></FilterBySpecie>
-    <FilterByName handleFilterName={props.handleFilterName}></FilterByName>
+    <form className="filters">
+      <FilterBySpecie
+        handleFilterSpecie={props.handleFilterSpecie}
+      ></FilterBySpecie>
+      <FilterByName handleFilterName={props.handleFilterName}></FilterByName>
+    </form>
   );
 }
 

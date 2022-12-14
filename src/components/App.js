@@ -2,7 +2,7 @@ import '../styles/App.scss';
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import ls from '../services/localStorage';
+import ls from '../services/LocalStorage';
 /*Components*/
 import ListCharacters from './ListCharacters';
 import Filters from './Filters';
@@ -12,18 +12,19 @@ import Footer from './Footer';
 
 function App() {
   const [dataChar, setDataChar] = useState([]);
-  const [filterBySpecie, setFilterBySpecie] = useState('');
+  const [filterBySpecie, setFilterBySpecie] = useState('all');
   const [filterByName, setFilterByName] = useState('');
 
   useEffect(() => {
     callToApi().then((cleanData) => {
       setDataChar(cleanData);
+      ls.set('data', cleanData);
     });
   }, []);
 
   const handleFilterSpecie = (specie) => {
     setFilterBySpecie(specie);
-    ls.set('FilterByName', specie);
+    ls.set('FilterBySpecie', specie);
   };
 
   const handleFilterName = (name) => {
@@ -33,7 +34,9 @@ function App() {
 
   const filterData = dataChar
     .filter((char) => char.name.includes(filterByName))
-    .filter((char) => char.specie === filterBySpecie);
+    .filter((char) => {
+      return filterBySpecie === 'all' ? true : char.specie === filterBySpecie;
+    });
 
   const findCharacter = (id) => {
     return dataChar.find((char) => char.id === parseInt(id));
@@ -47,7 +50,10 @@ function App() {
           element={
             <>
               <Header />
-              <Filters handleFilterName={handleFilterName} />
+              <Filters
+                handleFilterName={handleFilterName}
+                handleFilterSpecie={handleFilterSpecie}
+              />
               <ListCharacters characters={filterData} />
               <Footer />
             </>
