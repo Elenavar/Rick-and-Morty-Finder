@@ -1,0 +1,9 @@
+.header{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    &__text{
+        display: none;
+    }
+}

@@ -1,32 +1,5 @@
 @import './core/Reset.scss';
-@import './core/Variables.scss';
+
 .page{
     background-color: black;
-}
-
-.header{
-    display: flex;
-    height: 300px;
-    justify-content: center;
-    background-color: black;
-    &__text{
-        display: none;
-    }
-}
-
-.footer{
-    height: 100%;
-    background-color: black;
-    color: $textColor;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-    &__h3{
-        font-size: 12px;
-    }
-    &__p{
-        font-size: 10px;
-    }
 }

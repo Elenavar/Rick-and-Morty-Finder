@@ -1,0 +1,18 @@
+
+@import './core/Variables.scss';
+.footer{
+    height: 100%;
+    background-color: black;
+    color: $textColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    &__h3{
+        font-size: 12px;
+    }
+    &__p{
+        font-size: 10px;
+    }
+}
